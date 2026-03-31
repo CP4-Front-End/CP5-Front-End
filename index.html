@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="./src/style/style.css">
+  <title>Melodia</title>
 </head>
+
 <body>
-    
+
+  <div id="app"></div>
+
+  <section class="bg-gradient-to-br from-[#261C16] to-[#F22816] text-white relative overflow-hidden">
+
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex items-center justify-center gap-6 flex-wrap">
+
+      <nav class="flex items-center gap-6 text-sm font-medium lg:gap-10">
+        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" class="h-8">
+        <a href="#" class="hover:text-[#F22816] transition">Artistas</a>
+        <a href="#" class="hover:text-[#F22816] transition">Playlists</a>
+        <a href="#" class="hover:text-[#F22816] transition">Em alta</a>
+        <a href="#" class="hover:text-[#F22816] transition">Log in</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <div class="max-w-7xl px-6 mx-auto lg:px-8 py-32 lg:py-40 relative z-10">
+
+    <div class="max-w-xl">
+
+      <h1 class="text-3xl sm:text-4xl lg:text-6xl font-semibold tracking-tight leading-tight">
+        Melodia: sua música, sua forma
+      </h1>
+
+      <p class="mt-6 text-base sm:text-lg leading-relaxed">
+        Melodia é um app de músicas feito para você ouvir, explorar e organizar suas faixas favoritas com facilidade.
+        Descubra novos artistas, crie playlists e tenha suas músicas sempre à mão.
+        Tudo em um só lugar, de forma simples e rápida.
+      </p>
+
+      <div class="mt-12 flex items-center gap-6">
+        <a href="#"
+          class="bg-indigo-500 hover:bg-indigo-400 transition px-6 py-3 rounded-lg text-sm font-semibold shadow-lg">
+          Ouvir agora
+        </a>
+
+        <a href="#"
+          class="border border-grey-700 hover:bg-[#F22816] transition px-5 py-3 rounded-lg text-sm font-normal shadow-lg">
+          Preços
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="absolute inset-0 lg:relative lg:inset-auto lg:w-1/2">
+    <div class="absolute inset-0 bg-black/50 lg:hidden"></div>
+    <img
+      src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1170&auto=format&fit=crop"
+      class="w-full h-full object-cover opacity-40 lg:opacity-100">
+  </div>
+
+</section>
+
+
+
+  <script src="script.js"></script>
 </body>
 </html>
