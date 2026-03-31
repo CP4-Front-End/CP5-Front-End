@@ -44,3 +44,13 @@ likeBtn.addEventListener("click", () => {
     likeIcon.classList.add("fa-regular");
   }
 });
+
+const player = document.getElementById("player");
+const buttons = document.querySelectorAll(".openPlayer");
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    player.classList.remove("translate-y-full");
+    playIcon.classList.remove("fa-play");
+    playIcon.classList.add("fa-pause");
+  });
+});
