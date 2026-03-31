@@ -198,6 +198,110 @@
   </div>
 </section>
 
-  <script src="script.js"></script>
+<div class="bg-[#F26241] py-6 sm:py-32">
+  <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:px-8 xl:grid-cols-3">
+
+    <div class="max-w-xl">
+      <h2 class="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        Opiniões dos nossos ouvintes
+      </h2>
+    </div>
+
+    <ul class="grid gap-x-8 gap-y-12 sm:grid-cols-2 xl:col-span-2">
+
+      <!-- ITEM 1 -->
+      <li>
+        <div class="flex items-center gap-x-6">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=256"
+            class="size-16 rounded-full">
+          <div>
+            <h3 class="font-semibold text-white">Leslie Alexander</h3>
+            <p class="text-sm text-gray-700">
+              “Interface muito limpa e fácil de usar. Encontrei músicas novas em minutos.”
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <!-- ITEM 2 -->
+      <li>
+        <div class="flex items-center gap-x-6">
+          <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=256"
+            class="size-16 rounded-full">
+          <div>
+            <h3 class="font-semibold text-white">Michael Foster</h3>
+            <p class="text-sm text-gray-700">
+              “As recomendações são absurdamente boas, parece que o app me conhece.”
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <!-- ITEM 3 -->
+      <li>
+        <div class="flex items-center gap-x-6">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=256"
+            class="size-16 rounded-full">
+          <div>
+            <h3 class="font-semibold text-white">Dries Vincent</h3>
+            <p class="text-sm text-gray-700">
+              “Gostei muito das playlists, só podia ter mais opções offline.”
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <!-- ITEM 4 -->
+      <li>
+        <div class="flex items-center gap-x-6">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=256"
+            class="size-16 rounded-full">
+          <div>
+            <h3 class="font-semibold text-white">Lindsay Walton</h3>
+            <p class="text-sm text-gray-700">
+              “O player é rápido e sem travar. Melhor experiência que já tive.”
+            </p>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
+<div class="fixed bottom-0 left-0 w-full bg-[#261C16] text-white p-4 z-50">
+
+  <div class="max-w-5xl mx-auto flex items-center justify-between">
+
+    <!-- REPEAT -->
+    <button>
+      <i class="fa-solid fa-repeat"></i>
+    </button>
+
+    <!-- CONTROLES -->
+    <div class="flex items-center gap-6">
+
+      <button>
+        <i class="fa-solid fa-backward"></i>
+      </button>
+
+      <button id="play" class="bg-[#F22816] w-12 h-12 rounded-full flex items-center justify-center">
+        <i id="playIcon" class="fa-solid fa-play"></i>
+      </button>
+
+      <button>
+        <i class="fa-solid fa-forward"></i>
+      </button>
+
+    </div>
+
+    <!-- LIKE -->
+    <button id="like">
+      <i id="likeIcon" class="fa-regular fa-heart"></i>
+    </button>
+
+  </div>
+</div>
+
+  <script src="./src/js/script.js"></script>
 </body>
 </html>
