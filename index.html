@@ -18,61 +18,63 @@
 <body>
   <div id="app"></div>
 
-<section class="bg-gradient-to-br from-[#261C16] to-[#F22816] text-white relative overflow-hidden min-h-screen">
+  <section class="bg-gradient-to-br from-[#261C16] to-[#F22816] text-white relative overflow-hidden lg:min-h-screen">
 
-  <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition duration-300">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex items-center justify-center gap-6 flex-wrap">
-      <nav class="flex items-center gap-6 text-md font-medium lg:gap-10">
-        <img src="./src/imgs/logo.png" class="h-8">
-        <a href="#artistas" class="hover:text-[#F22816] transition">Artistas</a>
-        <a href="#playlists" class="hover:text-[#F22816] transition">Playlists</a>
-        <a href="?#" class="hover:text-[#F22816] transition">Em alta</a>
-        <a href="src/pages/login.html" class="hover:text-[#F22816] transition">Log in</a>
-      </nav>
+      <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex items-center justify-center gap-6 flex-wrap">
+          <nav class="flex flex-nowrap items-center gap-3 text-base lg:text-lg font-medium lg:gap-8 w-full justify-center">
+
+            <img src="./src/imgs/logo.png" class="h-8 shrink-0">
+
+            <a class="flex-shrink hover:text-[#F22816] transition">Lançamentos</a>
+            <a class="flex-shrink hover:text-[#F22816] transition">Playlists</a>
+            <a class="flex-shrink hover:text-[#F22816] transition">Opiniões</a>
+            <a class="flex-shrink hover:text-[#F22816] transition">Log in</a>
+
+          </nav>
+        </div>
+      </header>
+
+    <!-- Imagem de fundo no mobile (preservado) -->
+    <div class="absolute inset-0 lg:hidden">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1170&auto=format&fit=crop"
+        class="w-full h-full object-cover opacity-40">
     </div>
-  </header>
 
-  
-  <div class="absolute inset-0 lg:hidden">
-    <div class="absolute inset-0 bg-black/50"></div>
-    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1170&auto=format&fit=crop"
-      class="w-full h-full object-cover opacity-40">
-  </div>
+    <!-- Imagem desktop: absoluta, fora do container, cola na borda direita -->
+    <div class="hidden lg:block absolute top-0 right-0 w-1/2 h-full">
+      <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1170&auto=format&fit=crop"
+        class="w-full h-full object-cover">
+    </div>
 
-  
-  <div class="hidden lg:block absolute top-0 right-0 w-1/2 h-full">
-    <img
-      src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1170&auto=format&fit=crop"
-      class="w-full h-full object-cover">
-  </div>
-
- 
-  <div class="max-w-7xl px-6 mx-auto lg:px-8 py-32 lg:py-0 relative z-10 lg:flex lg:items-center lg:min-h-screen lg:justify-start">
-  <div class="relative z-10 lg:w-1/2 lg:pr-32 xl:pr-32">
-      <h1 class="text-3xl sm:text-4xl lg:text-6xl font-semibold tracking-tight leading-tight">
-        Melodia: sua música, sua forma
-      </h1>
-      <p class="mt-6 text-base sm:text-lg leading-relaxed">
-        Melodia é um app de músicas feito para você ouvir, explorar e organizar suas faixas favoritas com facilidade.
-        Descubra novos artistas, crie playlists e tenha suas músicas sempre à mão.
-        Tudo em um só lugar, de forma simples e rápida.
-      </p>
-      <div class="mt-12 flex items-center gap-6">
-        <a href="#"
-          class="bg-[#F22816] hover:bg-[#F26241] transition px-6 py-3 rounded-lg text-sm font-semibold shadow-lg">
-          Ouvir agora
-        </a>
-        <a href="./src/pages/precos.html"
-          class="border border-grey-700 hover:bg-[#F22816] transition px-5 py-3 rounded-lg text-sm font-normal shadow-lg">
-          Preços
-        </a>
+    <!-- Conteúdo -->
+    <div class="px-6 lg:px-16 xl:px-20 py-32 lg:py-0 relative z-10 lg:flex lg:items-center lg:min-h-screen">
+      <div class="relative z-10 lg:w-1/2 lg:pr-16 xl:pr-20">
+        <h1 class="text-3xl sm:text-4xl lg:text-6xl font-semibold tracking-tight leading-tight">
+          Melodia: sua música, sua forma
+        </h1>
+        <p class="mt-6 text-base sm:text-lg leading-relaxed italic">
+          Melodia é um app de músicas feito para você ouvir, explorar e organizar suas faixas favoritas com facilidade.
+          Descubra novos artistas, crie playlists e tenha suas músicas sempre à mão.
+          Tudo em um só lugar, de forma simples e rápida.
+        </p>
+        <div class="mt-12 flex items-center gap-6">
+          <a href="#"
+            class="bg-[#F22816] hover:bg-[#F26241] transition px-6 py-3 rounded-lg text-sm font-semibold shadow-lg">
+            Ouvir agora
+          </a>
+          <a href="./src/pages/precos.html"
+            class="border border-grey-700 hover:bg-[#F22816] transition px-5 py-3 rounded-lg text-sm font-normal shadow-lg">
+            Preços
+          </a>
+        </div>
       </div>
     </div>
-  </div>
 
-</section>
+  </section>
 
-  <section class="bg-[#F29580] text-white py-6">
+  <section class="bg-[#F29580] text-white py-6" id="artistas">
     <audio id="audioPlayer"></audio>
     <div class="max-w-7xl mx-auto px-6">
 
@@ -83,7 +85,7 @@
       <div class="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
 
         <!-- CARD 1 -->
-        <div class="min-w-[200px]" id="artistas">
+        <div class="min-w-[200px] lg:flex-1">
           <div class="relative">
             <img src="https://images.unsplash.com/photo-1717360564258-f6a9e4bc308c?q=80&w=1019&auto=format&fit=crop"
               class="w-full h-56 object-cover rounded-xl">
@@ -98,7 +100,7 @@
         </div>
 
         <!-- CARD 2 -->
-        <div class="min-w-[200px]">
+        <div class="min-w-[200px]  lg:flex-1">
           <div class="relative">
             <img
               src="https://plus.unsplash.com/premium_photo-1773902044720-94d9f36e65c7?q=80&w=735&auto=format&fit=crop"
@@ -114,7 +116,7 @@
         </div>
 
         <!-- CARD 3 -->
-        <div class="min-w-[200px]">
+        <div class="min-w-[200px] lg:flex-1">
           <div class="relative">
             <img
               src="https://plus.unsplash.com/premium_photo-1773772042727-f6151082bd83?q=80&w=687&auto=format&fit=crop"
@@ -130,7 +132,7 @@
         </div>
 
         <!-- CARD 4 -->
-        <div class="min-w-[200px]">
+        <div class="min-w-[200px] lg:flex-1">
           <div class="relative">
             <img src="https://images.unsplash.com/photo-1773904215693-934764345e52?q=80&w=1168&auto=format&fit=crop"
               class="w-full h-56 object-cover rounded-xl">
@@ -140,7 +142,7 @@
               <i class="fa-solid fa-play text-white text-sm"></i>
             </button>
           </div>
-          <h3 class="mt-3 font-semibold">D.B.N</h3>
+          <h3 class="mt-3 font-semibold" id="playlists">D.B.N</h3>
           <p class="text-sm">Dudu</p>
         </div>
 
@@ -152,12 +154,12 @@
     <div class="max-w-7xl mx-auto px-6">
 
       <h2 class="text-2xl font-semibold mb-8">
-        Suas playlists
+        Suas playlists:
       </h2>
 
       <div class="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
         <!-- CARD 1 -->
-        <div class="min-w-[200px]" id="playlists">
+        <div class="min-w-[200px] lg:flex-1">
           <div class="relative">
             <img src="https://images.unsplash.com/photo-1773853431084-eceaebe061c9?q=80&w=685&auto=format&fit=crop"
               class="w-full h-56 object-cover rounded-xl">
@@ -166,16 +168,16 @@
         </div>
 
         <!-- CARD 2 -->
-        <div class="min-w-[200px]">
+        <div class="min-w-[200px] lg:flex-1">
           <div class="relative">
             <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=1170&auto=format&fit=crop"
               class="w-full h-56 object-cover rounded-xl">
           </div>
-          <h3 class="mt-3 font-semibold">Mpb</h3>
+          <h3 class="mt-3 font-semibold">MPB</h3>
         </div>
 
         <!-- CARD 3 -->
-        <div class="min-w-[200px]">
+        <div class="min-w-[200px] lg:flex-1">
           <div class="relative">
             <img src="https://images.unsplash.com/photo-1773820680905-befd32984b3f?q=80&w=765&auto=format&fit=crop"
               class="w-full h-56 object-cover rounded-xl">
@@ -184,7 +186,7 @@
         </div>
 
         <!-- CARD 4 -->
-        <div class="min-w-[200px]">
+        <div class="min-w-[200px] lg:flex-1">
           <div class="relative">
             <img src="https://images.unsplash.com/photo-1625669708094-ad0d97f8b780?q=80&w=1170&auto=format&fit=crop"
               class="w-full h-56 object-cover rounded-xl">
@@ -198,11 +200,11 @@
 
 
   <!-- Opniões -->
-  <div class="bg-[#F26241] py-6 sm:py-32">
+  <div class="bg-[#F26241] py-6 sm:py-32" id="comentarios">
     <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:px-8 xl:grid-cols-3">
       <div class="max-w-xl">
         <h2 class="text-3xl font-semibold tracking-tight text-pretty text-white sm:text-4xl">Opiniões dos nossos
-          ouvintes</h2>
+          ouvintes:</h2>
       </div>
       <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
         <li>
@@ -326,47 +328,42 @@
   <footer class="bg-[#261C16] text-gray-300">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
 
-      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
 
-        <!-- LOGO + TEXTO -->
-        <div class="lg:col-span-2">
-          <img src="./src/imgs/logo.png" class="h-8 mb-6">
+      <div class="mb-10">
+        <img src="./src/imgs/logo.png" class="h-8 mb-6">
+        <p class="text-sm text-white leading-relaxed max-w-sm">
+          Ouça suas músicas favoritas, descubra novos sons e crie playlists do seu jeito.
+        </p>
+      </div>
 
-          <p class="text-sm text-white leading-relaxed max-w-sm">
-            Ouça suas músicas favoritas, descubra novos sons e crie playlists do seu jeito.
-          </p>
 
-          <div class="flex gap-6 mt-6">
-            <a href="#" class="hover:text-white">•</a>
-            <a href="#" class="hover:text-white">•</a>
-            <a href="#" class="hover:text-white">•</a>
-            <a href="#" class="hover:text-white">•</a>
-          </div>
+      <div class="grid grid-cols-2 gap-8">
+
+        <div>
+          <h3 class="text-sm font-semibold text-white mb-4">Informaçõs de contato:</h3>
+          <ul class=" text-sm">
+            <li>Tel: 11 99999-9999</li>
+            <li>Email: melodia@fiap.com</li>
+
+          </ul>
         </div>
 
-        <!-- LINKS -->
-        <div class="lg:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-8">
-
-          <div>
-            <h3 class="text-sm font-semibold text-white mb-4">Solutions</h3>
-            <ul class="space-y-3 text-sm">
-              <li><a href="#" class="hover:text-white">Marketing</a></li>
-              <li><a href="#" class="hover:text-white">Analytics</a></li>
-              <li><a href="#" class="hover:text-white">Automation</a></li>
-              <li><a href="#" class="hover:text-white">Commerce</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="text-sm font-semibold text-white mb-4">Support</h3>
-            <ul class="space-y-3 text-sm">
-              <li><a href="#" class="hover:text-white">Submit ticket</a></li>
-              <li><a href="#" class="hover:text-white">Documentation</a></li>
-              <li><a href="#" class="hover:text-white">Guides</a></li>
-            </ul>
-          </div>
-
+        <div>
+          <h3 class="text-sm font-semibold text-white mb-4">Redes Sociais</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="https://www.instagram.com/" class="hover:text-white transition">
+                <i class="fa-brands fa-instagram"></i>
+              </a></li>
+            <li><a href="https://pt-br.facebook.com/" class="hover:text-white transition">
+                <i class="fa-brands fa-facebook"></i>
+              </a></li>
+            <li><a href="https://x.com/" class="hover:text-white transition">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a></li>
+          </ul>
         </div>
+
+
 
       </div>
 
