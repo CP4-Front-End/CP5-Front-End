@@ -56,15 +56,12 @@ buttons.forEach(btn => {
 
 const audio = document.getElementById("audioPlayer");
 
-const base = window.location.hostname.includes("github.io")
-  ? "" // Pages
-  : "src/"; // Local
-
+// Banco de dados das músicas
 const musics = [
-  `${base}audio/Amiri.mp3`,
-  `${base}audio/TODASASLUZES.mp3`,
-  `${base}audio/ESQV.mp3`,
-  `${base}audio/DBN.mp3`
+  "/CP5-Front-End/src/audio/Amiri.mp3",
+  "/CP5-Front-End/src/audio/TODASASLUZES.mp3",
+  "/CP5-Front-End/src/audio/ESQV.mp3",
+  "/CP5-Front-End/src/audio/DBN.mp3"
 ];
 
 let currentIndex = 0;
