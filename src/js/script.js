@@ -58,10 +58,10 @@ const audio = document.getElementById("audioPlayer");
 
 // Banco de dados das músicas
 const musics = [
-  "/src/audio/Amiri.mp3",
-  "/src/audio/TODASASLUZES.mp3",
-  "/src/audio/ESQV.mp3",
-  "/src/audio/DBN.mp3"
+  "./src/audio/Amiri.mp3",
+  "./src/audio/TODASASLUZES.mp3",
+  "./src/audio/ESQV.mp3",
+  "./src/audio/DBN.mp3"
 ];
 
 let currentIndex = 0;
