@@ -16,9 +16,8 @@
 </head>
 
 <body>
-
   <div id="app"></div>
-
+  
   <section class="bg-gradient-to-br from-[#261C16] to-[#F22816] text-white relative overflow-hidden">
 
     <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition duration-300">
@@ -73,6 +72,7 @@
   </section>
 
   <section class="bg-[#F29580] text-white py-6">
+    <audio id="audioPlayer"></audio>
     <div class="max-w-7xl mx-auto px-6">
 
       <h2 class="text-2xl font-semibold mb-8">
@@ -87,8 +87,10 @@
             <img src="https://images.unsplash.com/photo-1717360564258-f6a9e4bc308c?q=80&w=1019&auto=format&fit=crop"
               class="w-full h-56 object-cover rounded-xl">
             <button
-              class="openPlayer absolute bottom-3 right-3 bg-[#F22816] w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition">
+              class="openPlayer absolute bottom-3 right-3 bg-[#F22816] w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition"
+              data-src="./src/audio/Amiri.mp3">
               <i class="fa-solid fa-play text-white text-sm"></i>
+
             </button>
           </div>
           <h3 class="mt-3 font-semibold">Amiri</h3>
@@ -102,12 +104,13 @@
               src="https://plus.unsplash.com/premium_photo-1773902044720-94d9f36e65c7?q=80&w=735&auto=format&fit=crop"
               class="w-full h-56 object-cover rounded-xl">
             <button
-              class="openPlayer absolute bottom-3 right-3 bg-[#F22816] w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition">
+              class="openPlayer absolute bottom-3 right-3 bg-[#F22816] w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition"
+              data-src="./src/audio/TODASASLUZES.mp3">
               <i class="fa-solid fa-play text-white text-sm"></i>
             </button>
           </div>
-          <h3 class="mt-3 font-semibold">WARZONE</h3>
-          <p class="text-sm">Brandão085</p>
+          <h3 class="mt-3 font-semibold">TODAS AS LUZES</h3>
+          <p class="text-sm">Matuê</p>
         </div>
 
         <!-- CARD 3 -->
@@ -117,12 +120,13 @@
               src="https://plus.unsplash.com/premium_photo-1773772042727-f6151082bd83?q=80&w=687&auto=format&fit=crop"
               class="w-full h-56 object-cover rounded-xl">
             <button
-              class="openPlayer absolute bottom-3 right-3 bg-[#F22816] w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition">
+              class="openPlayer absolute bottom-3 right-3 bg-[#F22816] w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition"
+              data-src="./src/audio/ESQV.mp3">
               <i class="fa-solid fa-play text-white text-sm"></i>
             </button>
           </div>
-          <h3 class="mt-3 font-semibold">Reflexo</h3>
-          <p class="text-sm">Sidoka</p>
+          <h3 class="mt-3 font-semibold">ESQV</h3>
+          <p class="text-sm">Ryu, The Runner</p>
         </div>
 
         <!-- CARD 4 -->
@@ -131,12 +135,13 @@
             <img src="https://images.unsplash.com/photo-1773904215693-934764345e52?q=80&w=1168&auto=format&fit=crop"
               class="w-full h-56 object-cover rounded-xl">
             <button
-              class="openPlayer absolute bottom-3 right-3 bg-[#F22816] w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition">
+              class="openPlayer absolute bottom-3 right-3 bg-[#F22816] w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition"
+              data-src="./src/audio/DBN.mp3">
               <i class="fa-solid fa-play text-white text-sm"></i>
             </button>
           </div>
-          <h3 class="mt-3 font-semibold">Kallidade 2</h3>
-          <p class="text-sm">Kalli</p>
+          <h3 class="mt-3 font-semibold">D.B.N</h3>
+          <p class="text-sm">Dudu</p>
         </div>
 
       </div>
@@ -151,7 +156,6 @@
       </h2>
 
       <div class="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
-        <audio id="audioPlayer"></audio>
         <!-- CARD 1 -->
         <div class="min-w-[200px]">
           <div class="relative">
@@ -292,7 +296,7 @@
       <!-- CONTROLES -->
       <div class="flex items-center gap-6">
 
-        <button>
+        <button id="prev" >
           <i class="fa-solid fa-backward"></i>
         </button>
 
@@ -300,7 +304,7 @@
           <i id="playIcon" class="fa-solid fa-play"></i>
         </button>
 
-        <button>
+        <button id="next" >
           <i class="fa-solid fa-forward"></i>
         </button>
 
