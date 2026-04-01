@@ -76,7 +76,7 @@ const musics = [
   "/CP5-Front-End/src/audio/ESQV.mp3",
   "/CP5-Front-End/src/audio/DBN.mp3"
 ];
-const nomes =[
+const nomes = [
   ['Amiri', 'Yunk Vino, Veigh'],
   ['TODAS AS LUZES', 'Matuê'],
   ['ESQV', 'Ryu, The Runner'],
@@ -86,33 +86,29 @@ const nomes =[
 
 let currentIndex = 0;
 
-//Pega os elementos de texto no HTML
-const musicName = document.getElementById("musicName");
-const artistName = document.getElementById("artistName");
-
 //For para cada botão
 buttons.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     
     //Recebe a posição para saber qual música está tocando 
     currentIndex = index;
-
-
+    
+    
     //Pega o caminho da música no HTML
     const music = btn.getAttribute("data-src");
-
+    
     //Faz tocar
     audio.src = music;
     audio.play();
 
+    //Chama a função trocar o texto
+    updateMusicUI();
+    
     //Sobe o a barra e atualiza o icone 
     player.classList.remove("translate-y-full");
     playIcon.classList.remove("fa-play");
     playIcon.classList.add("fa-pause");
-
-    //Para trocar o texto 
-    musicName.textContent = nomes[index][0];
-    artistName.textContent = nomes[index][1];
+    
   });
 });
 
@@ -122,21 +118,34 @@ const nextBtn = document.getElementById("next");
 
 //Evento de click
 nextBtn.addEventListener("click", () => {
-
+  
   //Passa para a próxima música
   currentIndex++;
-
+  
   //Se o index for maior ou igual ao len do array volta o index a zero, recomeça
   if (currentIndex >= musics.length) {
     currentIndex = 0; // volta pro início
   }
+  
+  //Chama a função trocar o texto
+  updateMusicUI();
 
   //Toca a música
   audio.src = musics[currentIndex];
   audio.play();
-
+  
   playIcon.classList.replace("fa-play", "fa-pause");
 });
+
+//Pega os elementos de texto no HTML
+const musicName = document.getElementById("musicName");
+const artistName = document.getElementById("artistName");
+
+//Para trocar o texto da div
+function updateMusicUI() {
+  musicName.textContent = nomes[currentIndex][0];
+  artistName.textContent = nomes[currentIndex][1];
+}
 
 //Pega o botão voltar em HTML
 const prevBtn = document.getElementById("prev");
@@ -150,6 +159,9 @@ prevBtn.addEventListener("click", () => {
   if (currentIndex < 0) {
     currentIndex = musics.length - 1; // vai pro final
   }
+
+  //Chama a função trocar o texto
+  updateMusicUI();
 
   //Toca a música
   audio.src = musics[currentIndex];
